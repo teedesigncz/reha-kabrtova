@@ -41,51 +41,11 @@
 
     .logo {
       margin-bottom: 40px;
-      display: flex;
-      justify-content: center;
     }
 
-    .logo-rk {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-letter {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 7rem;
-      font-weight: 700;
-      color: #5a89b3;
-      line-height: 1;
-    }
-
-    .logo-cross {
-      position: relative;
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
-    }
-
-    .cross-v {
-      position: absolute;
-      width: 13px;
-      height: 44px;
-      background: #d4426a;
-      border-radius: 3px;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .cross-h {
-      position: absolute;
-      width: 44px;
-      height: 13px;
-      background: #d4426a;
-      border-radius: 3px;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
+    .logo img {
+      width: 220px;
+      height: auto;
     }
 
     .website-bar {
@@ -209,14 +169,7 @@
     <!-- Přední strana -->
     <div class="card-front">
       <div class="logo">
-        <div class="logo-rk">
-          <span class="logo-letter">R</span>
-          <div class="logo-cross">
-            <div class="cross-v"></div>
-            <div class="cross-h"></div>
-          </div>
-          <span class="logo-letter">K</span>
-        </div>
+        <img src="logo.png" alt="Rehabilitace Kábrtová logo">
       </div>
       <div class="website-bar">
         <a href="https://www.rehakabrtova.cz">www.RehaKabrtova.cz</a>
