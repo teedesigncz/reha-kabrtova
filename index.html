@@ -4,9 +4,222 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rehabilitace Kábrtová</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #c2d9e8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+    }
+
+    /* --- PŘEDNÍ STRANA --- */
+    .card-front {
+      background-color: #c2d9e8;
+      padding: 56px 40px 44px;
+      text-align: center;
+      border-bottom: 1px solid rgba(90, 137, 179, 0.15);
+    }
+
+    .logo {
+      margin-bottom: 40px;
+    }
+
+    .logo svg {
+      width: 200px;
+      height: auto;
+    }
+
+    .website-bar {
+      display: inline-block;
+      background-color: #d4426a;
+      border-radius: 14px;
+      padding: 16px 36px;
+    }
+
+    .website-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    /* --- ZADNÍ STRANA --- */
+    .card-back {
+      background: linear-gradient(160deg, #4a7cb5 0%, #5c8dbe 100%);
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-back::before {
+      content: '';
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      width: 90px;
+      height: 70px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      border-left: none;
+      border-bottom: none;
+    }
+
+    .card-back::after {
+      content: '';
+      position: absolute;
+      right: 50px;
+      bottom: 20px;
+      width: 60px;
+      height: 50px;
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      border-right: none;
+      border-top: none;
+    }
+
+    .pink-panel {
+      background-color: #d4426a;
+      width: 72px;
+      border-radius: 0 48px 48px 0;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      padding: 44px 0;
+    }
+
+    .pink-panel svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-info {
+      padding: 40px 32px 40px 24px;
+      color: #fff;
+      flex: 1;
+    }
+
+    .company-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .contact-item {
+      margin-bottom: 22px;
+    }
+
+    .contact-item p {
+      font-size: 0.97rem;
+      line-height: 1.6;
+      opacity: 0.93;
+    }
+
+    .contact-item a {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.93;
+    }
+
+    .contact-item a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .website-bar a { font-size: 1rem; }
+      .company-name { font-size: 0.95rem; }
+      .contact-item p { font-size: 0.9rem; }
+      .pink-panel { width: 60px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Rehabilitace Kábrtová</h1>
-  <p>Web je úspěšně napojený přes GitHub.</p>
+
+  <div class="card">
+
+    <!-- Přední strana -->
+    <div class="card-front">
+      <div class="logo">
+        <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+          <!-- R -->
+          <text x="0" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="128" font-weight="700" fill="#5a89b3">R</text>
+          <!-- K -->
+          <text x="110" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="128" font-weight="700" fill="#5a89b3">K</text>
+          <!-- Kříž + -->
+          <rect x="92" y="32" width="11" height="44" fill="#d4426a" rx="3"/>
+          <rect x="75" y="47" width="44" height="11" fill="#d4426a" rx="3"/>
+        </svg>
+      </div>
+      <div class="website-bar">
+        <a href="https://www.rehakabrtova.cz">www.RehaKabrtova.cz</a>
+      </div>
+    </div>
+
+    <!-- Zadní strana -->
+    <div class="card-back">
+      <div class="pink-panel">
+        <!-- Osoba -->
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <!-- Adresa -->
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5" fill="#d4426a" stroke="#fff"/>
+        </svg>
+        <!-- Telefon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1-.24 1.1.37 2.3.57 3.6.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.2 2.5.57 3.6.1.33.02.73-.23 1L6.6 10.8z"/>
+        </svg>
+      </div>
+      <div class="contact-info">
+        <div class="company-name">REHABILITACE Kábrtová s.r.o.</div>
+        <div class="contact-item">
+          <p>Bc. Jitka Kábrtová, DiS.</p>
+        </div>
+        <div class="contact-item">
+          <p>Hroznětínská 350, 363 01 Ostrov<br>Poliklinika</p>
+        </div>
+        <div class="contact-item">
+          <p>
+            <a href="tel:+420721856568">721 856 568</a><br>
+            <a href="tel:+420353821321">353 821 321</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
